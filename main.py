@@ -78,9 +78,9 @@ while True:
     cv2.putText(imgBG, str(int(scores[1])), (640, 160), cv2.FONT_HERSHEY_PLAIN, 3, (0,0,0), 2)
 
     cv2.putText(imgBG, str('Press S to start'), (410, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
-    cv2.putText(imgBG, str('Press X to start'), (410, 160), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(imgBG, str('Press X to close'), (410, 160), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
 
-    cv2.imshow("BG", imgBG)
+    cv2.imshow("Rock-Paper-Scissors", imgBG)
     key = cv2.waitKey(1)
     if key == ord('s'):
         startGame = True
