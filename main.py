@@ -27,12 +27,13 @@ while True:
     imgScaled = imgScaled[:,51:353]                             #crop width of cam
     hands, img = detector.findHands(imgScaled)
 
+
     if startGame:
         
         if stateResult is False:
             timer = time.time() - InitialTime
             cv2.putText(imgBG, str(int(timer)), (450, 340), cv2.FONT_HERSHEY_PLAIN, 6, (0,0,0), 4)
-            if timer>3:
+            if timer>2:
                 stateResult = True
                 timer = 0 
 
@@ -55,7 +56,7 @@ while True:
 
                     # Draw
                     if playerMove == randomNumber:
-                        cv2.putText(imgBG, str('DRAW'), (410, 180), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+                        cv2.putText(imgBG, str('DRAW'), (410, 180), cv2.FONT_HERSHEY_PLAIN, 5, (0,0,0), 4)
 
                     # Player wins:
                     if(playerMove==1 and randomNumber==3) or (playerMove==2 and randomNumber==1) or (playerMove==3 and randomNumber==2):
@@ -71,7 +72,9 @@ while True:
     imgBG[178:481, 596:898] = imgScaled
 
     if stateResult:
-        imgBG = cvzone.overlayPNG(imgBG, imgAI, (60, 180))      
+        imgBG = cvzone.overlayPNG(imgBG, imgAI, (60, 180))   
+        
+
 
 
     cv2.putText(imgBG, str(int(scores[0])), (280, 160), cv2.FONT_HERSHEY_PLAIN, 3, (0,0,0), 2)
