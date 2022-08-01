@@ -1,5 +1,5 @@
 # 🔰Interactive-Rock-paper-Scissors
-### 🪨📃✂️ 
+# 🪨📃✂️ 
 This is a project made in python using opencv and cvzone library. In this project we can play the famous rock paper scissors with AI using our webcam and we get realtime scores in a fun and interactive manner. When we press S, the timer starts and AI generates random output after 3 seconds. Based on the output, whoever wins scores. 
 
 ## Project Preview : 
